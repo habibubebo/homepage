@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Habibubebo</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+      $.getJSON('https://api.ipify.org?format=jsonp&callback=?', function(data) {
+           $("#gfg").html(data.ip);
+           console.log(JSON.stringify(data, null, 2));
+      })
+      </script>
   </head>
   <body>
     <main>
@@ -44,9 +51,7 @@
                 <h1>Start Exploring now.</h1>
               </div>
               <p class="text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Delectus eius distinctio odit, magni magnam qui ex perferendis
-                vitae!
+                Your IP Address <span id="gfg"></span>
               </p>
               <div class="cta">
                 <a href="#" class="btn">Get started</a>
